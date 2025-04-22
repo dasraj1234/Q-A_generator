@@ -6,6 +6,12 @@ from docx import Document
 from io import BytesIO
 import os
 from dotenv import load_dotenv
+import shutil
+tesseract_path = shutil.which("tesseract")
+if tesseract_path is None:
+    st.error("Tesseract is not installed or not in PATH.")
+else:
+    st.success(f"Tesseract found at: {tesseract_path}")
 
 # Load environment variables
 load_dotenv()
@@ -20,6 +26,7 @@ def ocr_extract_text(image_path):
     and returns the extracted text.
     """
     image = Image.open(image_path)
+    pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  # Default on Render Debian-based images
     text = pytesseract.image_to_string(image)
     return text
 
