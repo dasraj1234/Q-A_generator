@@ -2,3 +2,4 @@ tesseract-ocr
 tesseract-ocr-ben
 libgl1
 poppler-utils
+python3-distutils
