@@ -1,4 +1,0 @@
-tesseract-ocr
-tesseract-ocr-ben         # Bengali language data for OCR
-libgl1                    # Required for image processing with PIL on some platforms
-poppler-utils             # Optional: Useful if you ever add PDF processing
