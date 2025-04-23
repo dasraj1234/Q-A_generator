@@ -7,11 +7,12 @@ from io import BytesIO
 import os
 from dotenv import load_dotenv
 import shutil
-tesseract_path = shutil.which("tesseract")
-if tesseract_path is None:
-    st.error("Tesseract is not installed or not in PATH.")
-else:
-    st.success(f"Tesseract found at: {tesseract_path}")
+#tesseract_path = shutil.which("tesseract")
+#if tesseract_path is None:
+    #st.error("Tesseract is not installed or not in PATH.")
+#else:
+    #st.success(f"Tesseract found at: {tesseract_path}")
+
 
 # Load environment variables
 load_dotenv()
